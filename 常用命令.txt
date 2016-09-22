@@ -1,0 +1,63 @@
+1.全局设置当前计算机所有git仓库的用户信息
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+
+2   新建文件夹-----找一个空的文件夹作为版本库的存储
+$ mkdir fileName ------新建文件夹 
+$ cd   fileName   -------打开文件夹
+$ pwd   --------显示当前工作的路径
+
+3. 新建版本库 --初始化---一个版本库
+git init ------创建一个默认隐藏的.git文件夹（根据计算机设置查看是否隐藏）
+
+4 . 如果版本库找不到.git文件夹，可以通过命令行查看是否存在
+is --ah
+
+5.  提交问价到仓库中，分两步
+ （1）添加一个文件到仓库 ----- git add filename
+ （2）附加提交该文档的说明信息   ---- git commit -m "message"
+
+ 6.  查看仓库的状态命令  ---查看当前文件是否做好提交的准备
+        git status
+
+  7.  查看文件修改的内容----有什么不同
+        git diff fileName
+    
+
+8. 查看最近的提交至仓库的文件修改内容
+    git log
+
+  9. 版本回退
+  HEAD  --指当前版本
+  HEAD^ -- 指上一个版本
+  HEAD^5 -- 指上五个版本
+  git reset --hard HEAD^  返回上一个版本
+  git reset --hard 版本号    返回的是某个版本
+
+  10. 查看当前版本具体内容
+  cat filename
+
+  11. 记录当前的所有命令 
+   git.reflog
+    
+ 12.   git add --- 可以添加多个文档，当前文档保存在暂存区内
+        git commit --- 一次性把暂存区内多个文档提交至 git仓库
+
+  13 . 撤销工作区文件的修改
+       git checkout -- fileName
+
+ 14.  提交到暂停区后，撤销掉当前的提交 状态------把暂停区的文件回退到工作区内
+           git reset HEAD readme.txt 
+    
+15 删除
+    rm fileName
+
+16 生成公钥
+    $ ssh-keygen -t rsa -C "995136791@qq.com"
+    $ cat ~/.ssh/id_rsa.pub
+
+
+
+  
+   
